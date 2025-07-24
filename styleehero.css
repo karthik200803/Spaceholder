@@ -1,0 +1,245 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+body::before {
+    content: ""; /* Essential for pseudo-elements to render */
+    position: fixed; /* Keeps the background fixed in the viewport even on scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://wallpapers.com/images/high/sukuna-devil-statue-4k-369jhy79qnb0e1z3.webp');
+    background-size:cover;
+    background-position: center; 
+    background-repeat: no-repeat; /* Prevents tiling */
+    filter: blur(5px); /* Adjust this value (e.g., 2px, 10px) for more or less blur */
+    z-index: -2; /* Puts this element behind all other content */
+   
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  background-color: rgba(44, 62, 80, 0.6); 
+  overflow: hidden;
+  z-index: 8; /* Ensures it's above the background */
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/308/560/904/2560x1440-px-bridge-castle-cathedral-dark-souls-iii-moon-screen-shot-video-games-village-anime-death-note-hd-art-wallpaper-preview.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  opacity: 0.8;
+  z-index: -1; /* Keep it behind navbar content */
+}
+.search-bar{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search-input{
+  width: 100;
+  text-align: center;
+  border: none;
+  padding: 3px 10px;
+  outline: none;
+  border-radius: 20px;
+  background-color: #2C3E50;
+  color: white;
+  opacity: 0.7;
+}
+.search-btn{
+  padding: 5px 8px;
+  border: none;
+  outline: none;
+  background-color: #2C3E50;
+  color: white;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+.search-btn:hover {
+  background-color:black;
+}
+.nav-links {
+  display: flex;
+  column-gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links a:hover {
+  color: darkslategrey;
+
+}
+
+.toggle {
+  display: none;
+}
+
+.side-nav {
+  background-color: #2C3E50;
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: -100%;
+  padding: 20px;
+  transition: left 3s ease;
+  z-index:9;
+
+}
+
+.side-nav-link {
+  margin-bottom: 40px;
+}
+
+.side-nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.side-nav-links a:hover {
+  color: midnightblue;
+  animation: both;
+}
+
+.latest-animes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+.latest-container {
+  flex-basis: 18%;
+  position: relative;
+  margin: 20px;
+  /* box-shadow: 0px 2px 5px rgba(0,0,0,0.3); */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.latest-container button{
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  bottom: 58px;
+  color: white;
+  background-color:#2C3E50;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  margin: 2px;
+  opacity: 0.7;
+  
+}
+
+.latest-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.latest-container img:hover{
+  transform: scale(0.90); 
+}
+
+.manga-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), bold);
+  color:white;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.manga-info .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+
+}
+
+.manga-info .author {
+  font-size: 12px;
+  margin: 2px 0 0 0;
+}
+
+.popular-anime{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.popular-container{
+   flex-basis: 18%;
+  position: relative;
+  margin: 20px;
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.3) */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.popular-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.popular-container img:hover{
+  transform: scale(0.90);
+}
+.popular-container button{
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  bottom: 58px;
+  color: white;
+  background-color:#2C3E50;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  margin: 2px;
+  opacity: 0.8; 
+}
+.footer{
+  margin-top: 30px;
+  background-color: #2C3E50;
+  padding:20px;
+  color: whitesmoke;
+  opacity: 0.8;
+  text-shadow: 3px 4px black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+@media screen and (max-width:700px) {
+  .toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
