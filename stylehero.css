@@ -65,7 +65,7 @@ body::before {
 }
 
 .search-input {
-  width: 100;
+  width: 80%;
   text-align: center;
   border: none;
   padding: 3px 10px;
