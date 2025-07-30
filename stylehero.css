@@ -368,4 +368,15 @@ body::before {
   .nav-links {
     display: none;
   }
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .nav, .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
 }
